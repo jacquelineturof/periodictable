@@ -1,6 +1,7 @@
 .element,
 .family {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
@@ -15,13 +16,52 @@
 .element {
     border: 2px solid $color-black;
     font-weight: 900;
-}
+    cursor: pointer;
 
-.alkali__metals {
-    
+    &--non_metals {
+        background-color: $color-non-metals;
+    }
+
+    &--alkali_metals {
+        background-color: $color-alkali-metals;
+    }
+
+    &--alkali_earth_metals {
+        background-color: $color-alkali-earth-metals;
+    }
+
+    &--transition_metals {
+        background-color: $color-transition-metals;
+    }
+
+    &--post_transition_metals {
+        background-color: $color-post-transition-metals;
+    }
+
+    &--metalloids {
+        background-color: $color-metalloids;
+    }
+
+    &--noble_gas {
+        background-color: $color-noble-gas;
+    }
+
+    &__symbol {
+        margin: .5rem;
+    }
+
+    &__atomic__number,
+    &__atomic__weight {
+        font-weight: 400;
+    }
 }
 
 .family {
     font-weight: 400;
+}
+
+.lanthanideseries {
+    background-color: orange;
+    padding: 12rem 24rem;
 }
 

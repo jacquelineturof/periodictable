@@ -15,7 +15,17 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
-  position: absolute; }
+  position: absolute;
+  display: block;
+  z-index: 0; }
+  .container__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7); }
 
 .height__full {
   height: 100%; }
@@ -25,9 +35,19 @@ body {
   position: relative;
   top: 5%; }
 
+.hidden {
+  display: none; }
+
+.center-text {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 .element,
 .family {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'Lato', sans-serif;
@@ -39,10 +59,53 @@ body {
 
 .element {
   border: 2px solid #000;
-  font-weight: 900; }
+  font-weight: 900;
+  cursor: pointer; }
+  .element--non_metals {
+    background-color: #c2e812; }
+  .element--alkali_metals {
+    background-color: #ab488a; }
+  .element--alkali_earth_metals {
+    background-color: #8B9EB7; }
+  .element--transition_metals {
+    background-color: #745296; }
+  .element--post_transition_metals {
+    background-color: #86BBD8; }
+  .element--metalloids {
+    background-color: #33658A; }
+  .element--noble_gas {
+    background-color: #F26419; }
+  .element__symbol {
+    margin: .5rem; }
+  .element__atomic__number, .element__atomic__weight {
+    font-weight: 400; }
 
 .family {
   font-weight: 400; }
+
+.lanthanideseries {
+  background-color: orange;
+  padding: 12rem 24rem; }
+
+.modal {
+  position: absolute;
+  z-index: 100;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 50%;
+  background-color: #fff;
+  border: 4px solid #000; }
+  .modal__icon {
+    position: relative;
+    font-size: 2.4rem;
+    float: right;
+    margin: 2rem;
+    cursor: pointer; }
+  .modal__heading {
+    font-size: 3.6rem;
+    font-family: 'Lato', sans-serif; }
 
 .row {
   max-width: 114rem;

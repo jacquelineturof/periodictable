@@ -4,22 +4,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel = "stylesheet" href = "/css/style.css">
     </head>
     <body>
+        <div class="container__overlay hidden"></div>
         <div class="container">
+
             <div class="row height__full">
-                
                 <!-- IA -->
                 <div class="col-1-of-18 height__large">
                     <h5 class="family">IA</h5>
-                    <div class="element alkali__metals">H</div>
-                    <div class="element alkali__metals">Li</div>
-                    <div class="element alkali__metals">Na</div>
-                    <div class="element alkali__metals">K</div>
-                    <div class="element alkali__metals">Rb</div>
-                    <div class="element alkali__metals">Cs</div>
-                    <div class="element alkali__metals">Fr</div>
+                    <div class="element element--non_metals">
+                        <span class = "element__atomic__number">1</span>
+                        <span class = "element__symbol">H</span>
+                        <span class = "element__atomic__weight">1.008</span>
+                    </div>
+                    <div class="element element--alkali_metals">
+                        <span class = "element__atomic__number">3</span>
+                        <span class = "element__symbol">Li</span>
+                        <span class = "element__atomic__weight">6.94</span>
+                    </div>
+                    <div class="element element--alkali_metals">
+                        <span class = "element__atomic__number">11</span>
+                        <span class = "element__symbol">Na</span>
+                        <span class = "element__atomic__weight">22.990</span>
+                    </div>
+                    <div class="element element--alkali_metals">
+                        <span class = "element__atomic__number">19</span>
+                        <span class = "element__symbol">K</span>
+                        <span class = "element__atomic__weight">39.098</span>
+            
+                    </div>
+                    <div class="element element--alkali_metals">
+                        <span class = "element__atomic__number">37</span>
+                        <span class = "element__symbol">Rb</span>
+                        <span class = "element__atomic__weight">85.468</span>
+                    </div>
+                    <div class="element element--alkali_metals">
+                        <span class = "element__atomic__number">55</span>
+                        <span class = "element__symbol">Cs</span>
+                        <span class = "element__atomic__weight">132.91</span>
+                    </div>
+                    <div class="element element--alkali_metals">
+                        <span class = "element__atomic__number">87</span>
+                        <span class = "element__symbol">Fr</span>
+                        <span class = "element__atomic__weight">(223)</span>
+                    </div>
                 </div>
 
                 <!-- IIA -->
@@ -27,12 +58,36 @@
                     <!-- need one blank element for column -->
                     <div class="blank"></div>
                     <h5 class="family">IIA</h5>
-                    <div class="element">Be</div>
-                    <div class="element">Mg</div>
-                    <div class="element">Ca</div>
-                    <div class="element">Sr</div>
-                    <div class="element">Ba</div>
-                    <div class="element">Ra</div>
+                    <div class="element element--alkali_earth_metals">
+                        <span class = "element__atomic__number">4</span>
+                        <span class = "element__symbol">Be</span>
+                        <span class = "element__atomic__weight">9.0122</span>
+                    </div>
+                    <div class="element element--alkali_earth_metals">
+                        <span class = "element__atomic__number">12</span>
+                        <span class = "element__symbol">Mg</span>
+                        <span class = "element__atomic__weight">24.305</span>
+                    </div>
+                    <div class="element element--alkali_earth_metals">
+                        <span class = "element__atomic__number">20</span>
+                        <span class = "element__symbol">Ca</span>
+                        <span class = "element__atomic__weight">40.078</span>
+                    </div>
+                    <div class="element element--alkali_earth_metals">
+                        <span class = "element__atomic__number">38</span>
+                        <span class = "element__symbol">Sr</span>
+                        <span class = "element__atomic__weight">87.62</span>
+                    </div>
+                    <div class="element element--alkali_earth_metals">
+                        <span class = "element__atomic__number">56</span>
+                        <span class = "element__symbol">Ba</span>
+                        <span class = "element__atomic__weight">137.33</span>
+                    </div>
+                    <div class="element element--alkali_earth_metals">
+                        <span class = "element__atomic__number">88</span>
+                        <span class = "element__symbol">Ra</span>
+                        <span class = "element__atomic__weight">(226)</span>
+                    </div>
                 </div>
 
                 <!-- IIIIB -->
@@ -42,8 +97,8 @@
                     <div class="blank"></div>
                     <div class="blank"></div>
                     <h5 class="family">IIIIB</h5>
-                    <div class="element">Sc</div>
-                    <div class="element">Y</div>
+                    <div class="element element--transition_metals">Sc</div>
+                    <div class="element element--transition_metals">Y</div>
                     <div class="element">*La</div>
                     <div class="element">+Ac</div>
                 </div>
@@ -55,10 +110,10 @@
                     <div class="blank"></div>
                     <div class="blank"></div>
                     <h5 class="family">IVB</h5>
-                    <div class="element">Ti</div>
-                    <div class="element">Zr</div>
-                    <div class="element">Hf</div>
-                    <div class="element">Rf</div>
+                    <div class="element element--transition_metals">Ti</div>
+                    <div class="element element--transition_metals">Zr</div>
+                    <div class="element element--transition_metals">Hf</div>
+                    <div class="element element--transition_metals">Rf</div>
                 </div>
 
                 <!-- VB -->
@@ -68,10 +123,10 @@
                     <div class="blank"></div>
                     <div class="blank"></div>
                     <h5 class="family">VB</h5>
-                    <div class="element">V</div>
-                    <div class="element">Nb</div>
-                    <div class="element">Ta</div>
-                    <div class="element">Ha</div>
+                    <div class="element element--transition_metals">V</div>
+                    <div class="element element--transition_metals">Nb</div>
+                    <div class="element element--transition_metals">Ta</div>
+                    <div class="element element--transition_metals">Ha</div>
                 </div>
 
                 <!-- VIB -->
@@ -81,10 +136,10 @@
                     <div class="blank"></div>
                     <div class="blank"></div>
                     <h5 class="family">VIB</h5>
-                    <div class="element">Cr</div>
-                    <div class="element">Mo</div>
-                    <div class="element">W</div>
-                    <div class="element">106</div>
+                    <div class="element element--transition_metals">Cr</div>
+                    <div class="element element--transition_metals">Mo</div>
+                    <div class="element element--transition_metals">W</div>
+                    <div class="element element--transition_metals">106</div>
                 </div>
 
                 <!-- VIIB -->
@@ -94,14 +149,161 @@
                     <div class="blank"></div>
                     <div class="blank"></div>
                     <h5 class="family">VIIB</h5>
-                    <div class="element">Mn</div>
-                    <div class="element">Tc</div>
-                    <div class="element">Re</div>
-                    <div class="element">108</div>
+                    <div class="element element--transition_metals">Mn</div>
+                    <div class="element element--transition_metals">Tc</div>
+                    <div class="element element--transition_metals">Re</div>
+                    <div class="element element--transition_metals">107</div>
                 </div>
 
-            
+                <!-- Three Columns VIII -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need three blank elements for column -->
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <h5 class="family">VIII</h5>
+                    <div class="element element--transition_metals">Fe</div>
+                    <div class="element element--transition_metals">Ru</div>
+                    <div class="element element--transition_metals">Os</div>
+                    <div class="element element--transition_metals">108</div>
+                </div>
+
+                <div class="col-1-of-18 height__large">
+                    <!-- need three blank elements for column -->
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <h5 class="family">VIII</h5>
+                    <div class="element element--transition_metals">Co</div>
+                    <div class="element element--transition_metals">Rh</div>
+                    <div class="element element--transition_metals">Ir</div>
+                    <div class="element">109</div>
+                </div>
+
+                <div class="col-1-of-18 height__large">
+                    <!-- need three blank elements for column -->
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <h5 class="family">VIII</h5>
+                    <div class="element element--transition_metals">Ni</div>
+                    <div class="element element--transition_metals">Pd</div>
+                    <div class="element element--transition_metals">Pt</div>
+                    <div class="element">110</div>
+                </div>
+
+                <!-- Two Columns IB -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need three blank elements for column -->
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <h5 class="family">IB</h5>
+                    <div class="element element--transition_metals">Cu</div>
+                    <div class="element element--transition_metals">Ag</div>
+                    <div class="element element--transition_metals">Au</div>
+                    <div class="blank"></div>
+                </div>
+
+                <!-- Two Columns IB -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need three blank elements for column -->
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <h5 class="family">IB</h5>
+                    <div class="element element--transition_metals">Zn</div>
+                    <div class="element element--transition_metals">Cd</div>
+                    <div class="element element--transition_metals">Hg</div>
+                    <div class="blank"></div>
+                </div>
+
+                <!-- IIIA -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need one blank on top and one on bottom for column -->
+                    <div class="blank"></div>
+                    <h5 class="family">IIIA</h5>
+                    <div class="element element--metalloids">B</div>
+                    <div class="element element--post_transition_metals">Al</div>
+                    <div class="element element--post_transition_metals">Ga</div>
+                    <div class="element element--post_transition_metals">In</div>
+                    <div class="element element--post_transition_metals">Tl</div>
+                    <div class="blank"></div>
+                </div>
+
+                <!-- IVA -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need one blank on top and one on bottom for column -->
+                    <div class="blank"></div>
+                    <h5 class="family">IVA</h5>
+                    <div class="element element--non_metals">C</div>
+                    <div class="element element--metalloids">Si</div>
+                    <div class="element element--metalloids">Ge</div>
+                    <div class="element element--post_transition_metals">Sn</div>
+                    <div class="element element--post_transition_metals">Pb</div>
+                    <div class="blank"></div>
+                </div>
+
+                <!-- VA -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need one blank on top and one on bottom for column -->
+                    <div class="blank"></div>
+                    <h5 class="family">VA</h5>
+                    <div class="element element--non_metals">N</div>
+                    <div class="element element--non_metals">P</div>
+                    <div class="element element--metalloids">As</div>
+                    <div class="element element--metalloids">Sb</div>
+                    <div class="element element--post_transition_metals">Bi</div>
+                    <div class="blank"></div>
+                </div>
+
+                <!-- VIA -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need one blank on top and one on bottom for column -->
+                    <div class="blank"></div>
+                    <h5 class="family">VIA</h5>
+                    <div class="element element--non_metals">O</div>
+                    <div class="element element--non_metals">S</div>
+                    <div class="element element--non_metals">Se</div>
+                    <div class="element element--metalloids">Te</div>
+                    <div class="element element--post_transition_metals">Po</div>
+                    <div class="blank"></div>
+                </div>
+
+                <!-- VIIA -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need one blank on top and one on bottom for column -->
+                    <div class="blank"></div>
+                    <h5 class="family">VIIA</h5>
+                    <div class="element element--non_metals">F</div>
+                    <div class="element element--non_metals">Cl</div>
+                    <div class="element element--non_metals">Br</div>
+                    <div class="element element--non_metals">I</div>
+                    <div class="element element--metalloids">At</div>
+                    <div class="blank"></div>
+                </div>
+
+                <!-- 0 -->
+                <div class="col-1-of-18 height__large">
+                    <!-- need one blank on the bottom of column-->
+                    <h5 class="family">0</h5>
+                    <div class="element element--noble_gas">He</div>
+                    <div class="element element--noble_gas">Ne</div>
+                    <div class="element element--noble_gas">Ar</div>
+                    <div class="element element--noble_gas">Kr</div>
+                    <div class="element element--noble_gas">Xe</div>
+                    <div class="element element--noble_gas">Rn</div>
+                    <div class="blank"></div>
+                </div>
+
             </div>
         </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous">
+        </script>
+        <script src = "/js/index.js"></script>
     </body>
 </html>
