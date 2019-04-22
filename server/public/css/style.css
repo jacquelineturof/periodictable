@@ -79,6 +79,9 @@ body {
     margin: .5rem; }
   .element__atomic__number, .element__atomic__weight {
     font-weight: 400; }
+  .element__block {
+    height: 100%;
+    width: 100%; }
 
 .family {
   font-weight: 400; }
@@ -105,7 +108,11 @@ body {
     cursor: pointer; }
   .modal__heading {
     font-size: 3.6rem;
-    font-family: 'Lato', sans-serif; }
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); }
 
 .row {
   max-width: 114rem;

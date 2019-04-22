@@ -8,27 +8,28 @@ elements.forEach(element => {
         container_ol.classList.remove('hidden');
         // Send text to append to modal
         const elementSymbol = e.target.innerText;
-        const modal = createModal(elementSymbol);
+        // The second class set will always be the background color.
+        // element.scss
+        const elementBackgroundColor = e.target.classList[1];
+        
+        const modal = createModal(elementSymbol, elementBackgroundColor);
         // add to DOM
         container_ol.appendChild(modal);
     });
 });
 
-const createModal = (elementSymbol) => {
+const createModal = (elementSymbol, elementBackgroundColor) => {
     // create modal
     const modal = document.createElement('div');
-    // const elementSymbol = e.target.innerText;
     modal.classList.add('modal');
-    // modal.innerText = elementSymbol;
     const icon = createCloseIcon(modal);
-    const textSpan = document.createElement('span');
-    textSpan.classList.add('center-text', 'modal__heading');
-    const text = document.createTextNode(elementSymbol);
-    textSpan.appendChild(text);
+    const textSpan = createTextNode(elementSymbol);
+    const elementDiv = createElementBlock();
+    elementDiv.appendChild(textSpan);
+    elementDiv.appendChild(icon);
+    elementDiv.classList.add(elementBackgroundColor); // add appropiate background color from e.target
+    modal.appendChild(elementDiv);
     
-    modal.appendChild(textSpan);
-    modal.appendChild(icon);
-
     return modal;
 };
 
@@ -42,4 +43,19 @@ const createCloseIcon = (modal) => {
     });
     
     return icon;
+};
+
+const createTextNode = (elementSymbol) => {
+    const textSpan = document.createElement('span');
+    textSpan.classList.add('modal__heading');
+    const text = document.createTextNode(elementSymbol);
+    textSpan.appendChild(text);
+
+    return textSpan;
+};
+
+const createElementBlock = () => {
+    const elementDiv = document.createElement('div');
+    elementDiv.classList.add('element__block')
+    return elementDiv;
 };
