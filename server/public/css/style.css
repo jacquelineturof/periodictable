@@ -1,0 +1,71 @@
+/* Browser Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute; }
+
+.height__full {
+  height: 100%; }
+
+.height__large {
+  height: 90%;
+  position: relative;
+  top: 5%; }
+
+.element,
+.family {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem; }
+
+.element,
+.blank {
+  height: calc(100% / 8); }
+
+.element {
+  border: 2px solid #000;
+  font-weight: 900; }
+
+.family {
+  font-weight: 400; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+  .row .col-1-of-18 {
+    width: calc(100% / 18); }

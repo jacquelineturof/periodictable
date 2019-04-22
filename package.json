@@ -1,0 +1,17 @@
+{
+  "name": "PeriodicTable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss server/public/css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "hbs": "4.0.4",
+    "express":"4.16.4"
+  }
+}
