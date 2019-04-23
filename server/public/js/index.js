@@ -1,31 +1,36 @@
 const elements = document.querySelectorAll('.element');
 const container_ol = document.querySelector('.container__overlay');
 
-elements.forEach(element => {
+elements.forEach( (element, index) => {
     element.addEventListener("click", (e) => {
         
         // grey out page before displaying modal
         container_ol.classList.remove('hidden');
         // Send text to append to modal
-        const elementSymbol = e.target.innerText;
-        // The second class set will always be the background color.
-        // element.scss
-        const elementBackgroundColor = e.target.classList[1];
-        
-        const modal = createModal(elementSymbol, elementBackgroundColor);
+        const element = elements[index];
+        console.log(element.childNodes[1].innerText);
+        const elementSymbol = element.childNodes[1].innerText;
+        const elementAtomicNumber = element.childNodes[3].innerText;
+        const elementAtomicWeight = element.childNodes[5].innerText;
+        const elementBackgroundColor = elements[index].classList[1];
+        const modal = createModal(elementSymbol, elementAtomicNumber, elementAtomicWeight, elementBackgroundColor);
         // add to DOM
         container_ol.appendChild(modal);
     });
 });
 
-const createModal = (elementSymbol, elementBackgroundColor) => {
+const createModal = (elementSymbol, elementAtomicNumber, elementAtomicWeight, elementBackgroundColor) => {
     // create modal
     const modal = document.createElement('div');
     modal.classList.add('modal');
     const icon = createCloseIcon(modal);
-    const textSpan = createTextNode(elementSymbol);
+    const symbolSpan = createTextNode(elementSymbol);
+    const atomicNumberSpan = createTextNode(elementAtomicNumber);
+    const atomicWeightSpan = createTextNode(elementAtomicWeight);
     const elementDiv = createElementBlock();
-    elementDiv.appendChild(textSpan);
+    elementDiv.appendChild(atomicNumberSpan);
+    elementDiv.appendChild(symbolSpan);
+    elementDiv.appendChild(atomicWeightSpan);
     elementDiv.appendChild(icon);
     elementDiv.classList.add(elementBackgroundColor); // add appropiate background color from e.target
     modal.appendChild(elementDiv);
