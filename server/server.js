@@ -7,6 +7,7 @@ const port = process.env.PORT || 3001;
 
 app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname, 'views'));
+hbs.registerPartials(__dirname + '/views/partials');
 
 const publicPath = path.join(__dirname, 'public');
 app.use(express.static(publicPath));

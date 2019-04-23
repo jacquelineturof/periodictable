@@ -21,17 +21,26 @@ elements.forEach( (element, index) => {
 
 const createModal = (elementSymbol, elementAtomicNumber, elementAtomicWeight, elementBackgroundColor) => {
     // create modal
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
-    const icon = createCloseIcon(modal);
+    const modal = document.createElement('div');    const icon = createCloseIcon(modal);
     const symbolSpan = createTextNode(elementSymbol);
     const atomicNumberSpan = createTextNode(elementAtomicNumber);
     const atomicWeightSpan = createTextNode(elementAtomicWeight);
     const elementDiv = createElementBlock();
-    elementDiv.appendChild(atomicNumberSpan);
-    elementDiv.appendChild(symbolSpan);
-    elementDiv.appendChild(atomicWeightSpan);
+    const dataDiv = document.createElement('div');
+    const spinner = document.createElement('div');
+
+    modal.classList.add('modal');
+    dataDiv.classList.add('element__data');
+    spinner.classList.add('spinner', 'hidden');
+
     elementDiv.appendChild(icon);
+    elementDiv.appendChild(dataDiv);
+    
+    dataDiv.appendChild(atomicNumberSpan);
+    dataDiv.appendChild(symbolSpan);
+    dataDiv.appendChild(atomicWeightSpan);
+    dataDiv.appendChild(spinner);
+    
     elementDiv.classList.add(elementBackgroundColor); // add appropiate background color from e.target
     modal.appendChild(elementDiv);
     
@@ -62,5 +71,6 @@ const createTextNode = (elementSymbol) => {
 const createElementBlock = () => {
     const elementDiv = document.createElement('div');
     elementDiv.classList.add('element__block')
+    
     return elementDiv;
 };

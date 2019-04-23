@@ -81,7 +81,17 @@ body {
     font-weight: 400; }
   .element__block {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    position: absolute; }
+  .element__data {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; }
 
 .family {
   font-weight: 400; }
@@ -108,14 +118,33 @@ body {
     cursor: pointer; }
   .modal__heading {
     font-size: 3.6rem;
-    font-family: 'Lato', sans-serif;
-    position: relative;
-    top: 50%;
+    font-family: 'Lato', sans-serif; }
+
+.spinner {
+  height: 100vh;
+  opacity: 1;
+  position: relative;
+  transition: opacity linear 0.1s; }
+  .spinner::before {
+    animation: 2s linear infinite spinner;
+    border: solid 3px #eee;
+    border-bottom-color: #EF6565;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
     left: 50%;
-    transform: translate(-50%, 50%);
-    display: flex;
-    flex-direction: column;
-    border: 4px solid red; }
+    position: absolute;
+    top: 30%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 40px;
+    will-change: transform; }
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg); }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg); } }
 
 .row {
   max-width: 114rem;
