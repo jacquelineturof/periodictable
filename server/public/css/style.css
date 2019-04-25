@@ -58,7 +58,7 @@ body {
   height: calc(100% / 8); }
 
 .element {
-  border: 2px solid #000;
+  border: 2px solid black;
   font-weight: 900;
   cursor: pointer; }
   .element--non_metals {
@@ -79,19 +79,22 @@ body {
     margin: .5rem; }
   .element__atomic__number, .element__atomic__weight {
     font-weight: 400; }
-  .element__block {
-    height: 100%;
-    width: 100%;
-    position: absolute; }
   .element__data {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem; }
+    list-style: none;
+    text-align: center;
+    display: block;
+    transform: translateY(3rem);
+    font-size: 3.2rem;
+    font-family: 'Lato', sans-serif; }
+    .element__data li {
+      padding: .5rem; }
+    .element__data--oxidation-states {
+      float: right;
+      display: block;
+      list-style: none;
+      padding: 1rem; }
+    .element__data--oxidation-state {
+      font-size: 1.6rem; }
 
 .family {
   font-weight: 400; }
@@ -100,7 +103,7 @@ body {
   background-color: orange;
   padding: 12rem 24rem; }
 
-.modal {
+.modal, .modal__spinner {
   position: absolute;
   z-index: 100;
   top: 40%;
@@ -108,17 +111,19 @@ body {
   transform: translate(-50%, -50%);
   height: 50%;
   width: 50%;
-  background-color: #fff;
-  border: 4px solid #000; }
-  .modal__icon {
-    position: relative;
-    font-size: 2.4rem;
-    float: right;
-    margin: 2rem;
-    cursor: pointer; }
-  .modal__heading {
-    font-size: 3.6rem;
-    font-family: 'Lato', sans-serif; }
+  border: 4px solid #000;
+  background-color: #fff; }
+
+.modal__icon {
+  position: relative;
+  font-size: 2.4rem;
+  float: right;
+  margin: 2rem;
+  cursor: pointer; }
+
+.modal__heading {
+  font-size: 3.6rem;
+  font-family: 'Lato', sans-serif; }
 
 .spinner {
   height: 100vh;
@@ -134,7 +139,7 @@ body {
     height: 40px;
     left: 50%;
     position: absolute;
-    top: 30%;
+    top: 25%;
     transform: translate3d(-50%, -50%, 0);
     transform-origin: center;
     width: 40px;
@@ -145,6 +150,45 @@ body {
     transform: translate3d(-50%, -50%, 0) rotate(0deg); }
   100% {
     transform: translate3d(-50%, -50%, 0) rotate(360deg); } }
+
+.fa-atom {
+  font-size: 10rem;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: 5s linear infinite spinner; }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  top: 25%;
+  left: 30%; }
+  .card__side {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    transition: all .8s ease;
+    height: 20rem;
+    width: 20rem; }
+    .card__side--back {
+      transform: rotateY(-180deg); }
+  .card__container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
 
 .row {
   max-width: 114rem;

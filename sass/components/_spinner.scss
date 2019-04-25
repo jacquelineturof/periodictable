@@ -14,7 +14,7 @@
         height: 40px;
         left: 50%;
         position: absolute;
-        top: 30%;
+        top: 25%;
         transform: translate3d(-50%, -50%, 0);
         transform-origin: center;
         width: 40px;
@@ -30,3 +30,43 @@
          transform: translate3d(-50%, -50%, 0) rotate(360deg);
     }
 }
+
+// .spinner1 {
+//     opacity: 1;  
+//     position: relative;
+//     color: black;
+
+
+//     &::before {
+//         content: "";
+
+//         left: 70%;
+//         position: absolute;
+//         top: 25%;
+        
+//         animation: 2s linear infinite spinner;
+//         border: solid 3px #eee;
+//         border-bottom-color: #EF6565;
+        
+//     }
+// }
+
+.fa-atom {
+    font-size: 10rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: 5s linear infinite spinner;
+}
+
+// .spinner1 {
+//     background-image: url("/Users/jacquelineturof/Desktop/Portfolio/PeriodicTable/server/public/img/icon1.png");
+//     height: 10rem;
+//     width: 10rem;
+//     border: 2px solid red;
+// }
+
