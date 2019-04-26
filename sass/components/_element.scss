@@ -14,36 +14,86 @@
 }
 
 .element {
-    border: 2px solid black;
+    // border: 1px solid black;
     font-weight: 900;
     cursor: pointer;
+    // border-radius: .3rem;
 
     &--non_metals {
         background-color: $color-non-metals;
+
+        &:hover {
+            transform: scale(.9);
+            color: #FF0000;
+            box-shadow: 0 0 15px #FD1C03;
+            text-shadow: 0 0 15px #FD1C03;
+        }    
     }
 
     &--alkali_metals {
         background-color: $color-alkali-metals;
+
+        &:hover {
+            transform: scale(.9);
+            color: #FFFF00;
+            box-shadow: 0 0 15px #F2EA02;
+            text-shadow: 0 0 15px#F2EA02;
+        }    
     }
 
     &--alkali_earth_metals {
         background-color: $color-alkali-earth-metals;
+        &:hover {
+            transform: scale(.9);
+            color: #9D00FF;
+            box-shadow: 0 0 15px #CC00FF;
+            text-shadow: 0 0 15px #CC00FF;
+        }    
+        
     }
 
     &--transition_metals {
         background-color: $color-transition-metals;
+        
+        &:hover {
+            transform: scale(.9);
+            color: #4ae252;
+            box-shadow: 0 0 15px #09e514;
+            text-shadow: 0 0 15px #09e514;
+        }    
     }
 
     &--post_transition_metals {
         background-color: $color-post-transition-metals;
+
+        &:hover {
+            transform: scale(.9);
+            color: #FF6600;
+            box-shadow: 0 0 15px #FF3300;
+            text-shadow: 0 0 15px #FF3300;
+        }    
     }
 
     &--metalloids {
         background-color: $color-metalloids;
+        
+        &:hover {
+            transform: scale(.9);
+            color: #FFFF33;
+            box-shadow: 0 0 15px #FFFF00;
+            text-shadow: 0 0 15px #FFFF00;
+        }   
     }
 
     &--noble_gas {
         background-color: $color-noble-gas;
+
+        &:hover {
+            transform: scale(.9);
+            color: #00FFFF;
+            box-shadow: 0 0 15px #099FFF;
+            text-shadow: 0 0 15px #099FFF;
+        }    
     }
 
     &__symbol {
@@ -83,6 +133,8 @@
             
         }
     }
+
+
 }
 
 .family {

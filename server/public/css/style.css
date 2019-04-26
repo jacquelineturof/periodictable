@@ -58,23 +58,57 @@ body {
   height: calc(100% / 8); }
 
 .element {
-  border: 2px solid black;
   font-weight: 900;
   cursor: pointer; }
   .element--non_metals {
     background-color: #c2e812; }
+    .element--non_metals:hover {
+      transform: scale(0.9);
+      color: #FF0000;
+      box-shadow: 0 0 15px #FD1C03;
+      text-shadow: 0 0 15px #FD1C03; }
   .element--alkali_metals {
     background-color: #ab488a; }
+    .element--alkali_metals:hover {
+      transform: scale(0.9);
+      color: #FFFF00;
+      box-shadow: 0 0 15px #F2EA02;
+      text-shadow: 0 0 15px #F2EA02; }
   .element--alkali_earth_metals {
     background-color: #8B9EB7; }
+    .element--alkali_earth_metals:hover {
+      transform: scale(0.9);
+      color: #9D00FF;
+      box-shadow: 0 0 15px #CC00FF;
+      text-shadow: 0 0 15px #CC00FF; }
   .element--transition_metals {
     background-color: #745296; }
+    .element--transition_metals:hover {
+      transform: scale(0.9);
+      color: #4ae252;
+      box-shadow: 0 0 15px #09e514;
+      text-shadow: 0 0 15px #09e514; }
   .element--post_transition_metals {
     background-color: #86BBD8; }
+    .element--post_transition_metals:hover {
+      transform: scale(0.9);
+      color: #FF6600;
+      box-shadow: 0 0 15px #FF3300;
+      text-shadow: 0 0 15px #FF3300; }
   .element--metalloids {
     background-color: #33658A; }
+    .element--metalloids:hover {
+      transform: scale(0.9);
+      color: #FFFF33;
+      box-shadow: 0 0 15px #FFFF00;
+      text-shadow: 0 0 15px #FFFF00; }
   .element--noble_gas {
     background-color: #F26419; }
+    .element--noble_gas:hover {
+      transform: scale(0.9);
+      color: #00FFFF;
+      box-shadow: 0 0 15px #099FFF;
+      text-shadow: 0 0 15px #099FFF; }
   .element__symbol {
     margin: .5rem; }
   .element__atomic__number, .element__atomic__weight {
@@ -106,13 +140,14 @@ body {
 .modal, .modal__spinner {
   position: absolute;
   z-index: 100;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
-  width: 50%;
-  border: 4px solid #000;
-  background-color: #fff; }
+  height: 75%;
+  width: 75%;
+  background-color: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: .3rem; }
 
 .modal__icon {
   position: relative;

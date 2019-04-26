@@ -84,7 +84,7 @@ const createBlock = (modal, data, bgClass) => {
     createDataLi('electronicConfiguration', data, dataListBack);
 
     // bonding type
-    createDataLi('bondingType', data, dataListBack);
+    createDataLi('standardState', data, dataListBack);
     
     // Full Name
     createDataLi('name', data, dataListBack);
@@ -144,96 +144,9 @@ const getData = (atomicNumber, modal) => {
         });
 };
 
-// const createModal = async (elementSymbol, elementAtomicNumber, 
-//                      elementAtomicWeight, elementBackgroundColor) => {
-//     // create modal
-//     const modal = document.createElement('div');
-//     const icon = createCloseIcon(modal);   
-//     const symbolSpan = createTextNode(elementSymbol);
-//     const atomicNumberSpan = createTextNode(elementAtomicNumber);
-//     const atomicWeightSpan = createTextNode(elementAtomicWeight);
-//     const elementDiv = createElementBlock();
-//     const dataDiv = document.createElement('div');
-
-//     // Create Modal, append to Dom,
-//     // show spinner until we load data
-//     // then load data div
-//     modal.classList.add('modal');
-
-//     // Get data
-//     // Display spinner while getting data
-//     // show data once it's loaded...
-//     // My comments are so useless...
-//     const data = await getData(elementAtomicNumber);
-
-    
-//     dataDiv.classList.add('element__data');
-
-//     elementDiv.appendChild(icon);
-//     elementDiv.appendChild(dataDiv);
-    
-//     dataDiv.appendChild(atomicNumberSpan);
-//     dataDiv.appendChild(symbolSpan);
-//     dataDiv.appendChild(atomicWeightSpan);
-    
-//     elementDiv.classList.add(elementBackgroundColor); // add appropiate background color from e.target
-//     modal.appendChild(elementDiv);
-
-//     return modal;
-// };
-
-// const createCloseIcon = (modal) => {
-//     const icon = document.createElement('i');
-//     icon.classList.add('fas', 'fa-times',  'modal__icon');
-//     icon.addEventListener("click", () => {
-//         // remove modal and overlay from dom
-//         container_ol.removeChild(modal);
-//         container_ol.classList.add('hidden');
-//     });
-    
-//     return icon;
-// };
-
-// const createTextNode = (elementSymbol) => {
-//     const textSpan = document.createElement('span');
-//     textSpan.classList.add('modal__heading');
-//     const text = document.createTextNode(elementSymbol);
-//     textSpan.appendChild(text);
-
-//     return textSpan;
-// };
-
-// const createElementBlock = () => {
-//     const elementDiv = document.createElement('div');
-//     elementDiv.classList.add('element__block')
-    
-//     return elementDiv;
-// };
 
 
 
-// const showSpinner = () => {
-//     const spinnerModal = document.createElement('div');
-//     const spinner = document.createElement('i');
-    
-//     // Display overlay
-//     container_ol.classList.remove('hidden');
 
-//     spinnerModal.classList.add('modal__spinner');
-//     spinner.classList.add('fas', 'fa-atom', 'spinner1');
 
-//     // append modal to the overlay
-//     spinnerModal.appendChild(spinner);
-//     container_ol.appendChild(spinnerModal);
-// };
 
-// const removeSpinner = () => {
-//     const spinnerModal = document.querySelector('.modal__spinner');
-//     spinnerModal.removeChild(spinner);
-//     container_ol.removeChild(spinnerModal);
-//     container_ol.classList.add('hidden');
-// };
-
-// const displayData = () => {
-
-// };
